@@ -39,3 +39,6 @@
 ## m2.ex3.q5.3. Quais valores são exatamente iguais?
 
 ## m2.ex3.q5.4. Qual a diferença máxima (em módulo) entre eles? Qual é a causa dessa diferença?
+
+
+diferença

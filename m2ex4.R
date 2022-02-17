@@ -24,3 +24,5 @@
 ## Para criar o data frame, a primeira linha deve ser preenchida com as suas próprias informações (use a função data.frame()).
 ## Depois, pergunte essas mesmas informações para dois colegas ao seu lado, e adicione as informações deles à esse data frame (use rbind()).
 ## Acresente mais uma coluna com o nome do time de futebol de cada um.
+
+novidade

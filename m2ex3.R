@@ -8,8 +8,10 @@
 
 ##----------------------------------------------------------------------
 ## m2.ex3.q1. Crie um objeto com os valores 54, 0, 17, 94, 12.5, 2, 0.9, 15.
+valores <- c(54, 0, 17, 94, 12.5, 2, 0.9, 15)
 
 ## m2.ex3.q1.1. Some o objeto acima com os valores 5, 6.
+
 
 
 ## m2.ex3.q1.2. Some o objeto acima com os valores 5, 6, 7.

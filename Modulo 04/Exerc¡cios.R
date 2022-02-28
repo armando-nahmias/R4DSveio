@@ -48,22 +48,45 @@ da421i
 ##======================================================================
 
 ##----------------------------------------------------------------------
-## 4.4.1. Considere a tabela abaixo com o resultado de uma pesquisa que avaliou o número de fumates e não fumantes por sexo.
-Sexo
-Condição 	Masculino 	Feminino
-Fumante 	49 	54
-64 	61
-37 	79
-52 	64
-68 	29
-Não fumante 	27 	40
-58 	39
-52 	44
-41 	34
-30 	44
-Digite estes dados em uma planilha eletrônica em um formato apropriado para um data frame do R, e salve em um arquivo csv.
-Importe esse arquivo para o R com read.table().
-Crie uma nova coluna no objeto que contém estes dados, sendo a coluna com o número de pessoas multiplicada por 2.
-Exporte esse novo objeto usando a função write.table().
-Tente criar esse mesmo conjunto de dados usando comandos do R (ex.: c(), rep(), data.frame(), etc.)
+## 4.4.1. Considere a tabela abaixo com o resultado de uma pesquisa
+## que avaliou o número de fumates e não fumantes por sexo.
+## Sexo
+## Condição 	Masculino 	Feminino
+## Fumante 	49 	54
+## 64 	61
+## 37 	79
+## 52 	64
+## 68 	29
+## Não fumante 	27 	40
+## 58 	39
+## 52 	44
+## 41 	34
+## 30 	44
 
+## 4.4.2. Digite estes dados em uma planilha eletrônica
+## em um formato apropriado para um data frame do R, e salve em um arquivo csv.
+
+## 4.4.3. Importe esse arquivo para o R com read.table().
+url = "http://www.leg.ufpr.br/~fernandomayer/data/dados_ex4.csv"
+df443 <- read.table(url, header = TRUE, sep = ",")
+str(df443)
+
+
+## 4.4.4. Crie uma nova coluna no objeto que contém estes dados,
+## sendo a coluna com o número de pessoas multiplicada por 2.
+df443$N2 <- df443$Numero * 2
+df443
+
+## 4.4.5. Exporte esse novo objeto usando a função write.table().
+write.table(df443, "Modulo 04/dados/df443.csv", sep = ",", row.names = FALSE)
+
+## 4.4.6. Tente criar esse mesmo conjunto de dados usando comandos do R
+## (ex.: c(), rep(), data.frame(), etc.)
+df446 <- data.frame(
+  Condicao = rep(c("Fumante", "Nao Fumante"), each = 5, times = 2),
+  Sexo = rep(c("Masculino", "Feminino"), each = 10),
+  Numero = c(49, 64, 37, 52, 68, 27, 58, 52, 41, 30,
+             54, 61, 79, 64, 29, 40, 39, 44, 34, 44)
+)
+
+str(df446)
